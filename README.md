@@ -1,30 +1,70 @@
-# pick-name
-App that retrieves your classes and names of students from those classes. Then chooses a name at random.
+# Getting Started with Create React App
 
-## Vision
-Initially I want this to be an application. Probably a web app.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Problem: Educators have some primitive methods to cold calling students. Whether it is tediously writing their names on 120 popsicle sticks (where do you get that many sticks anyways) or trying to call at random based on where they sit in the room. These are all ways that are biased and primitive. I want to make an application that simply chooses a name of a student in your class at random with no bias. The application first and foremost should be simple to set-up and extremely simple to use. 
+## Available Scripts
 
-## Goal 
-Open web app. Get names of classes. Get names of students in classes. Choose a class to have a student name from that class appear at random. Save all this data for next use. 
+In the project directory, you can run:
 
-## IO
-I want to build this as an application. Deployed and ready to use by other educators. 
+### `npm start`
 
-Imputs
-  1. Number of classes should be imported or entered manually. 
-      Considering importing from pdf, txt, doc, csv, xls and saving to database.
-      There may be a better way. Need to do some research.
-  2. Names of students should also be imported or entered manually. 
-      As a start I can attempt extracting from text. Save to database.
-  3. Click on a class button with animation. 
-      Extend this with image of student if possible. 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Outputs
-  1. Get a simple page to display class in form of buttons with class labeled as text.
-  2. Display random student name
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-All this data should be saved so teacher can go back and choose again. 
+### `npm test`
 
-Extention: Random student groups generator. Can generate groups of 2 up to 6. 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
