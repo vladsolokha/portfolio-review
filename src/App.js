@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.css';
 
 const students = ['joe ', 'billy ', 'bob ', 'jane ', 'john ', 'isaac ', 'vlad ']; //will need to be imported from file or so
@@ -6,8 +6,8 @@ const students2 = ['gail', 'jaden', 'kai', 'bobby', 'a-a', 'fierce', 'eden', 'ta
 
 function App() {
 
-  const [names, setNames] = useState(students); //can store objects as state, can call in objects from outside of block
-  const [names2, setNames2] = useState(students2); 
+  const names = students; //can store objects as state, can call in objects from outside of block
+  const names2 = students2; 
   const [randomName, setRandomName] = useState(''); //sets state to get random name
   const [randomName2, setRandomName2] = useState('');
 
