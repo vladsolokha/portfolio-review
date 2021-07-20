@@ -1,10 +1,13 @@
 .App {
   text-align: center;
+  background-color: #282c34;
 }
 
+
+
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #41165e;
+  min-height: 10vh;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
@@ -15,7 +18,15 @@
 
 }
 
-.section1 {
-  order: 1;
-  width: auto;
+.main {
+  padding-top: 20%;
+  background-color: #282c34;
+  min-height: 80vh;
+  color: #8078b6;
+}
+
+.footer {
+  background-color: #282c34;
+  min-height: 10vh;
+  color: white;
 }

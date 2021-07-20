@@ -1,54 +1,61 @@
 import React, {useState} from 'react';
 import './App.css';
 
-const students = ['joe ', 'billy ', 'bob ', 'jane ', 'john ', 'isaac ', 'vlad ']; //will need to be imported from file or so
-const students2 = ['gail', 'jaden', 'kai', 'bobby', 'a-a', 'fierce', 'eden', 'tanya']
+const students = [
+  {
+    id: 1,
+    class: 'Section 1',
+    studentNames: ['joe','bob','vlad','fierce'],
+  },
+  {
+    id: 2,
+    class: 'Section 2',
+    studentNames: ['fred','malachi','jerry','isaac']
+  }
+];
 
 function App() {
-
-  const names = students; //can store objects as state, can call in objects from outside of block
-  const names2 = students2; 
+  const names = students;
   const [randomName, setRandomName] = useState(''); //sets state to get random name
-  const [randomName2, setRandomName2] = useState('');
-
+  const [selectedClass, setSelectedClass] = useState(1);
   const min = 0;
-  const max = names.length;
-  const max2 = names2.length;
+  const max = names[Number(selectedClass - 1)].studentNames.length;
 
-  const buttonHandler = () => {
-    const randindex = Math.floor(Math.random() * (max - min) + min);
-    const getName = names[randindex];
-    setRandomName(getName)
+  const getRandomName = () => {
+    const randomNumber = Math.floor(Math.random() * (max - min) + min);
+    const getName = names[Number(selectedClass - 1)].studentNames[randomNumber];
+    setRandomName(getName);
   }
-  const buttonHandler2 = () => {
-    const randindex2 = Math.floor(Math.random() * (max2 - min) + min);
-    const getName = names2[randindex2];
-    setRandomName2(getName)
+
+  const classHandler = (e) => {
+    setSelectedClass(e.target.value);
   }
+
+  console.log(selectedClass);
+  
 
 
   return (
     <div className="App">
       <header className="App-header">
-        <div className="section1">
-          <p>
-            {randomName} {/*called from state variable above*/}
-          </p>
-                  
-          <button onClick={buttonHandler}>
-            Get A Random Name Class 1
-          </button>
-        </div>
-        <div className="section2">
-          <p>
-            {randomName2}
-          </p> 
-
-          <button onClick={buttonHandler2}>
-            Get A Random Name Class 2
-          </button>
-        </div>
+        <span>Green Valley Ranch High School</span>
+          <button> &lt; add student &gt; </button>
       </header>
+      <main className='main'>
+        <label for='class'> choose your class</label> 
+        <select
+          defaultValue={selectedClass}
+          onChange={classHandler}
+        >
+          <option value='1'>Section 1</option>
+          <option value='2'>Section 2</option>
+        </select> 
+      <p>random name: {randomName}</p>
+      <button onClick={getRandomName} > &lt; PICK-R-NAME &gt;</button>
+      </main>          
+      <footer className = 'footer'>
+        <p> I'm a school yo </p>
+      </footer>
     </div>
   );
 }
