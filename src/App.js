@@ -3,7 +3,7 @@ import './App.css';
 
 import Header from './components/Header';
 import Footer from './components/Footer';
-import NamesList from './components/NamesList'
+import NamesList from './components/NamesList';
 
 const students = [
   {
@@ -22,6 +22,8 @@ function App() {
   const names = students;
   const [randomName, setRandomName] = useState(''); //sets state to get random name
   const [selectedClass, setSelectedClass] = useState(1);
+  const [newNameField, setNewNameField] = useState('');
+
   const min = 0;
   const max = names[Number(selectedClass - 1)].studentNames.length;
 
