@@ -33,10 +33,10 @@ Extention: A random student cannot be called twice in a row until at leat 10 oth
 ## How to run the code
 Option 1: Go to link https://pick-name.netlify.app
 Option 2: 
-  Clone the code into your preferred IDE (like VS code)
-  In terminal and directory of the project run 'npm i' (install npm dependencies)
-  In terminal run 'npm run start'
-  The project will run in browser 'localhost:3000'
+  Clone the code into your preferred IDE (like VS code).
+  In terminal and directory of the project run 'npm i' (install npm dependencies).
+  In terminal run 'npm run start'.
+  The project will run in browser 'localhost:3000'.
   
 Let me know if you have questions, comments, or suggestions on this. 
 
