@@ -1,11 +1,8 @@
 import React, {useState} from 'react';
 
 function NamesList(props) {
-    return ( 
-        
-        <>
-          </>  
-     )
+      return (
+        <></>
+      )
 }
-
 export default NamesList

@@ -3,15 +3,16 @@ import React from 'react';
 function Header(props) {
     return ( 
         <header className="App-header">
-            <button> &lt; add student &gt; </button>
-            <span>Green Valley Ranch High School</span>
-            <label for='class'> choose your class</label> 
+            
+            <h1>PICK R NAME</h1>
+            <h3>A RANDOM NAME PICKER</h3>
+            <label for='class'>CHOOSE YOUR SECTION</label> 
             <select
                 defaultValue={props.selectedClass}
                 onChange={props.classHandler}
                 >
-                <option value='1'>Section 1</option>
-                <option value='2'>Section 2</option>
+                <option value='1'>SECTION 1</option>
+                <option value='2'>SECTION 2</option>
             </select> 
         </header>
 

@@ -16,7 +16,8 @@ const students = [
     class: 'Section 2',
     studentNames: ['fred','malachi','jerry','isaac']
   }
-];
+];  
+
 
 function App() {
   const names = students;
@@ -24,12 +25,13 @@ function App() {
   const [selectedClass, setSelectedClass] = useState(1);
   const [newNameField, setNewNameField] = useState('');
 
+  const currentClassNames = names[Number(selectedClass - 1)];
   const min = 0;
-  const max = names[Number(selectedClass - 1)].studentNames.length;
+  const max = currentClassNames.studentNames.length;
 
   const getRandomName = () => {
     const randomNumber = Math.floor(Math.random() * (max - min) + min);
-    const getName = names[Number(selectedClass - 1)].studentNames[randomNumber];
+    const getName = currentClassNames.studentNames[randomNumber];
     setRandomName(getName);
   }
 
@@ -39,6 +41,9 @@ function App() {
 
   console.log(selectedClass);
   
+  const addName = () => {
+    return setSelectedClass.studentNames.push(newNameField);
+  }
 
 
   return (
@@ -47,14 +52,20 @@ function App() {
       <Header selectecClass={selectedClass} classHandler={classHandler} />
       
       <main className='main'>
+
+        <div className='addName'>
+          <form className='inputName' onSubmit={addName}>
+            <input type='text' placeholder='NEW STUDENT NAME'></input>
+            <input type='submit' value='ADD'></input>
+          </form>
+        </div>
         
         <div className='randomName'>
-          <p>random name: {randomName}</p>
-          <button onClick={getRandomName} > &lt; PICK-R-NAME &gt;</button>
+          <p>{randomName}</p>
+          <button onClick={getRandomName}>PICK R NAME</button>
         </div>
           
-        {/* <NamesList selectedClass={selectedClass} names={names} studentNames={names.studentNames} /> */}
-        <aside className='namesList'>
+        <div className='namesList'>
           {
             names[Number(selectedClass - 1)].studentNames.map(name => {
               return (
@@ -62,7 +73,7 @@ function App() {
               )
             })
           }
-        </aside>
+        </div>
 
       </main>          
       <Footer />
