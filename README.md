@@ -29,3 +29,14 @@ All this data should be saved so teacher can go back and choose again.
 
 Extention: Random student groups generator. Can generate groups of 2 up to 6. 
 Extention: A random student cannot be called twice in a row until at leat 10 other students are called first.
+
+## How to run the code
+Option 1: Go to link https://pick-name.netlify.app
+Option 2: 
+  Clone the code into your preferred IDE (like VS code)
+  In terminal and directory of the project run 'npm i' (install npm dependencies)
+  In terminal run 'npm run start'
+  The project will run in browser 'localhost:3000'
+  
+Let me know if you have questions, comments, or suggestions on this. 
+
