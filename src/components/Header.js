@@ -11,8 +11,8 @@ function Header(props) {
                 defaultValue={props.selectedClass}
                 onChange={props.classHandler}
                 >
-                <option value='1'>SECTION 1</option>
-                <option value='2'>SECTION 2</option>
+                <option selected value={1}>SECTION 1</option>
+                <option value={2}>SECTION 2</option>
             </select> 
         </header>
 

@@ -5,27 +5,25 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import NamesList from './components/NamesList';
 
-const students = [
+const sections = [
   {
     id: 1,
-    class: 'Section 1',
     studentNames: ['joe','bob','vlad','fierce'],
   },
   {
     id: 2,
-    class: 'Section 2',
     studentNames: ['fred','malachi','jerry','isaac']
   }
 ];  
 
 
 function App() {
-  const names = students;
   const [randomName, setRandomName] = useState(''); //sets state to get random name
   const [selectedClass, setSelectedClass] = useState(1);
   const [newNameField, setNewNameField] = useState('');
-
-  const currentClassNames = names[Number(selectedClass - 1)];
+  const [studentList, setStudentList] = useState(sections);
+ 
+  const currentClassNames = studentList[Number(selectedClass - 1)];
   const min = 0;
   const max = currentClassNames.studentNames.length;
 
@@ -36,13 +34,26 @@ function App() {
   }
 
   const classHandler = (event) => {
-    setSelectedClass(event.target.value);
+    setSelectedClass(parseInt(event.target.value));
   }
 
   console.log(selectedClass);
+  console.log('studentList', studentList);
   
-  const addName = () => {
-    return setSelectedClass.studentNames.push(newNameField);
+  const addName = (e) => {
+    if (newNameField === '') {
+      e.preventDefault()
+     }
+    const newStudentList = studentList.map(classObj => {
+      console.log('selectedClass', selectedClass, typeof selectedClass)
+      console.log('newNameField', newNameField)
+      if (classObj.id === selectedClass) {
+        classObj.studentNames.push(newNameField)
+      }
+      return classObj
+    })
+    console.log('newStudentList', newStudentList)
+    setStudentList(newStudentList)  
   }
 
 
@@ -54,8 +65,18 @@ function App() {
       <main className='main'>
 
         <div className='addName'>
-          <form className='inputName' onSubmit={addName}>
+          {/* <div>
             <input type='text' placeholder='NEW STUDENT NAME'></input>
+            <button onClick={addName}>ADD</button>
+          </div> */}
+          <form className='inputName' onSubmit={addName}>
+            <input 
+              type='text' 
+              placeholder='NEW NAME' 
+              onChange={(e) =>  setNewNameField(e.target.value)} 
+              value={newNameField} 
+              >
+              </input>
             <input type='submit' value='ADD'></input>
           </form>
         </div>
@@ -67,9 +88,9 @@ function App() {
           
         <div className='namesList'>
           {
-            names[Number(selectedClass - 1)].studentNames.map(name => {
+            studentList[Number(selectedClass - 1)].studentNames.map(name => {
               return (
-                <button key={name.id} className='name'> {name} </button> 
+                <button key={name} className='name'> {name} </button> 
               )
             })
           }
