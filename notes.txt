@@ -24,3 +24,16 @@ going to stop at 'fetching API with react'
 maybe there's a hook foor connecting api to react app?
 
 deploy using beanstalk
+
+
+10/22/2021
+React frontend, Express server, MongoDB database, Node backend
+
+React has hooks to manage state - use reducer hook to manage state of students
+get students from database using API calls from front {% endautoescape %}
+
+frontend calls server using REST API -> server calls database using fetch?
+
+After front end is ready, develop CRUD backend using GraphQL 
+implement into AWS using docker compose
+ 

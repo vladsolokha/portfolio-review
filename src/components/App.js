@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import './App.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import NamesList from './components/NamesList';
+import Header from './Header';
+import Footer from './Footer';
+import Sections from './Sections';
 
 const sections = [
   {
@@ -60,8 +60,8 @@ function App() {
   return (
     <div className="App">
       
-      <Header selectecClass={selectedClass} classHandler={classHandler} />
-      
+      <Header />
+      <Sections selectecClass={selectedClass} classHandler={classHandler} />
       <main className='main'>
 
         <div className='addName'>

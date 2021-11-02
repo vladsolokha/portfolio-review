@@ -4,7 +4,7 @@ function Footer() {
     return ( 
         
         <footer className = 'footer'>
-            <p> I'm a school yo </p>
+            <p> Created by Vlad Solokha </p>
         </footer>
 
      )
