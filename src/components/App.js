@@ -16,7 +16,6 @@ const sections = [
   }
 ];  
 
-
 function App() {
   const [randomName, setRandomName] = useState(''); //sets state to get random name
   const [selectedClass, setSelectedClass] = useState(1);

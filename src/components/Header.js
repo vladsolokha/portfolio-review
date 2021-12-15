@@ -11,8 +11,17 @@ function Header() {
     return ( 
         <header className="App-header">
             
-            <h1>PICK R NAME</h1>
-            <h3>A RANDOM NAME PICKER</h3>
+            <h1 className="title">PICK R NAME</h1>
+            <h3 className="subtitle">A RANDOM NAME PICKER</h3>
+
+            <div className="join-container">
+                <div className="join-code">
+                    <h2>JOIN CODE</h2>
+                </div>
+                <div className="join-button">
+                    <button>JOIN </button>
+            </div>  
+            </div>
             
         </header>
 
